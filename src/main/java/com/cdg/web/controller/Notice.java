@@ -1,12 +1,14 @@
 package com.cdg.web.controller;
 
 import lombok.AllArgsConstructor;
+import lombok.Data;
 import lombok.Getter;
 
-import java.time.LocalDate;
+import java.time.LocalDate; // 날짜 정보만! 시간 정보만 필요할 땐 LocalTime! 날짜와 시간이 모두 필요할 땐 LocalDateTime
 
+@Data // @ToString, @EqualsAndHashCode, @Getter-모든 필드, @Setter-final 이 아닌 모든 필드, and @RequiredArgsConstructor
 @Getter
-@AllArgsConstructor
+@AllArgsConstructor // 모든 필드 값을 파라미터로 받는 생성자 만들기
 public class Notice {
     private int id;
     private String title;

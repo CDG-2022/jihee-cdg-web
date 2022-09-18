@@ -13,7 +13,7 @@ class TestController {
         // 대충 디비랑 통신해서 로그인정보를 가져옴
 
         return "/test.html";
-//        return "[ '최강훈', '이상훈' ]";
+//        return "[ '전지희', '이상훈' ]";
     }
 
 }
