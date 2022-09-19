@@ -3,7 +3,7 @@ package com.cdg.web;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-@SpringBootApplication
+@SpringBootApplication // 이 클래스는 스프링 부트의 어플리케이션!
 public class CdgWebApplication {
 
     public static void main(String[] args) {
