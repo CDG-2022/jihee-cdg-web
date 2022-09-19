@@ -5,6 +5,10 @@ import org.springframework.web.bind.annotation.GetMapping;
 
 //@RestController
 @Controller
+// @RestController                  vs      @Controller
+// 뷰 리턴 불가능                         Spring Web MVC
+//                                      뷰 리턴 가능
+// 기본적으로 @ResponseBody 의미론을 가정하는 컨트롤러(?)   모든 핸들러 메서드에 @ResponseBody 필요
 class TestController {
 
     @GetMapping("/api/v1/cdg-names")

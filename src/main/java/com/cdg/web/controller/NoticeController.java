@@ -9,7 +9,8 @@ import org.springframework.web.bind.annotation.*;
 import java.time.LocalDate;
 import java.util.List;
 
-@RestController
+@RestController // @Controller 의 특수 버전, @Controller 및 @ResponseBody 포함(보통 둘이 같이 씀) -> 컨트롤러 구현을 단순화, @ResponseBody 불필요
+//@Component 아래에 @Controller 아래에 @RestController
 public class NoticeController {
 
     private List<Notice> list = List.of(
