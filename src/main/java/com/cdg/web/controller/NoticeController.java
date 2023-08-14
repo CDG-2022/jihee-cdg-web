@@ -3,6 +3,7 @@ package com.cdg.web.controller;
 import com.cdg.web.controller.request.NoticeCreateRequest;
 import com.cdg.web.controller.request.NoticeGetRequest;
 import com.cdg.web.controller.request.NoticeModifyRequest;
+import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -11,15 +12,19 @@ import java.util.List;
 
 @RestController // @Controller 의 특수 버전, @Controller 및 @ResponseBody 포함(보통 둘이 같이 씀) -> 컨트롤러 구현을 단순화, @ResponseBody 불필요
 //@Component 아래에 @Controller 아래에 @RestController
+@RequiredArgsConstructor
 public class NoticeController {
 
+    private final NoticeRepository noticeRepository;
+
     private List<Notice> list = List.of(
-            new Notice(0, "제목1", "내용", "전지희", LocalDate.now(), LocalDate.now()),
+            /*new Notice(0, "제목1", "내용", "전지희", LocalDate.now(), LocalDate.now()),
             new Notice(1, "제목2", "내용", "전지희", LocalDate.now(), LocalDate.now()),
             new Notice(2, "제목3", "내용", "전지희", LocalDate.now(), LocalDate.now()),
             new Notice(3, "제목4", "내용", "전지희", LocalDate.now(), LocalDate.now()),
-            new Notice(4, "제목5", "내용", "전지희", LocalDate.now(), LocalDate.now())
+            new Notice(4, "제목5", "내용", "전지희", LocalDate.now(), LocalDate.now())*/
     );
+
 
     @GetMapping("/notices")
     public List<Notice> getList(NoticeGetRequest request) {
